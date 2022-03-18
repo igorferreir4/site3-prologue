@@ -8,60 +8,42 @@ order: 5
 
 <h4>Aplicações rodando na Oracle Cloud.</h4>
             
-<style>
-    .botao, .fechar {
-      color: #000;
-      text-decoration: none;
-    }
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     
-    .botao { background-color: yellow; }
+    <script>
+      $(function(){
+        $("#criar-modal").click(function(){
+          $("#modal-alerta").modal();
+        });
+      });
+    </script>
+
+    <button class="btn btn-primary" id="criar-modal">Acionar Modal</button>
     
-    .sobreposicao {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0, 0, 0, 0.7);
-      transition: opacity 500ms;
-      visibility: hidden;
-      opacity: 0;
-    }
-    
-    .sobreposicao:target { visibility: visible; opacity: 1; }
-    
-    .abrir {
-      margin: 70px auto;
-      background: pink;
-      border-radius: 3px;
-      width: 30%;
-      position: relative;
-    }
-    
-    .fechar {
-      position: absolute;
-      top: 0.5rem;
-      right: 0.5rem;
-    }
-    
-    .abrir .conteudo {
-      max-height: 30%;
-      overflow: auto;
-    }
-    </style>
-    
-    
-    Regular text <span class="box"><a class="botao" href="#thepopup">popup link</a></span> regular text
-    
-    <!-- Only show the content below when the popup is clicked -->
-    <div id="thepopup" class="sobreposicao">
-        <div class="abrir">
-            <h2>H2 Heading</h2>
-            <a class="fechar" href="#">Fechar</a>
-            <div class="conteudo">
-                Popup content.
-            </div>
+    <div class="modal" id="modal-alerta">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          
+          <!-- Cabeçalho do Modal -->
+          <div class="modal-header">
+            <h2>Apresentando Modal</h2>
+          </div>
+          
+          <!-- Corpo do Modal -->
+          <div class="modal-body">
+            <p>Mostrando Modal em BootStrap</p>
+          </div>
+          
+          <!-- Rodapé do Modal -->
+          <div class="modal-footer">
+            <button class="btn btn-danger" data-dismiss="modal">Fechar Modal</button>
+          </div>
         </div>
+      </div>
     </div>
-    
-    
