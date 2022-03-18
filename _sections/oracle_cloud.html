@@ -8,42 +8,20 @@ order: 5
 
 <h4>Aplicações rodando na Oracle Cloud.</h4>
             
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<script src="{{- 'assets/css/w3.css' | relative_url -}}" defer></script>
 
-    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    
-    <script>
-      $(function(){
-        $("#criar-modal").click(function(){
-          $("#modal-alerta").modal();
-        });
-      });
-    </script>
+<div class="w3-container">
+  <h2>W3.CSS Modal</h2>
+  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">Open Modal</button>
 
-    <button class="btn btn-primary" id="criar-modal">Acionar Modal</button>
-    
-    <div class="modal" id="modal-alerta">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          
-          <!-- Cabeçalho do Modal -->
-          <div class="modal-header">
-            <h2>Apresentando Modal</h2>
-          </div>
-          
-          <!-- Corpo do Modal -->
-          <div class="modal-body">
-            <p>Mostrando Modal em BootStrap</p>
-          </div>
-          
-          <!-- Rodapé do Modal -->
-          <div class="modal-footer">
-            <button class="btn btn-danger" data-dismiss="modal">Fechar Modal</button>
-          </div>
-        </div>
+  <div id="id01" class="w3-modal">
+    <div class="w3-modal-content">
+      <div class="w3-container">
+        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+        <p>Some text. Some text. Some text.</p>
+        <p>Some text. Some text. Some text.</p>
       </div>
     </div>
+  </div>
+</div>
