@@ -9,14 +9,14 @@ order: 5
 <h4>Aplicações rodando na Oracle Cloud.</h4>
             
 <style>
-    .button, .close {
+    .botao, .fechar {
       color: #000;
       text-decoration: none;
     }
     
-    .button { background-color: yellow; }
+    .botao { background-color: yellow; }
     
-    .overlay {
+    .sobreposicao {
       position: absolute;
       top: 0;
       bottom: 0;
@@ -28,9 +28,9 @@ order: 5
       opacity: 0;
     }
     
-    .overlay:target { visibility: visible; opacity: 1; }
+    .sobreposicao:target { visibility: visible; opacity: 1; }
     
-    .popup {
+    .abrir {
       margin: 70px auto;
       background: pink;
       border-radius: 3px;
@@ -38,27 +38,27 @@ order: 5
       position: relative;
     }
     
-    .close {
+    .fechar {
       position: absolute;
       top: 0.5rem;
       right: 0.5rem;
     }
     
-    .popup .content {
+    .abrir .conteudo {
       max-height: 30%;
       overflow: auto;
     }
     </style>
     
     
-    Regular text <span class="box"><a class="button" href="#thepopup">popup link</a></span> regular text
+    Regular text <span class="box"><a class="botao" href="#thepopup">popup link</a></span> regular text
     
     <!-- Only show the content below when the popup is clicked -->
-    <div id="thepopup" class="overlay">
-        <div class="popup">
+    <div id="thepopup" class="sobreposicao">
+        <div class="abrir">
             <h2>H2 Heading</h2>
-            <a class="close" href="#">close</a>
-            <div class="content">
+            <a class="fechar" href="#">Fechar</a>
+            <div class="conteudo">
                 Popup content.
             </div>
         </div>
