@@ -8,22 +8,60 @@ order: 5
 
 <h4>Aplicações rodando na Oracle Cloud.</h4>
             
-    <ul>
-    {% for member in site.data.oracle %}
-      <li>
-        <a href="#" class="show-message">
-          {{ member.name }}, click me to see something
-        </a>
-        <div class="modal hide"> My favorite music is {{ oracle.music}}</div>
-      </li>
-    {% endfor %}
-    </ul>
-
-    <script>
-        $(document).ready(function () {
-            $("a.show-message").on("click", function () {
-                console.log("clicked");
-                $(this).next().removeClass("hide");
-            });
-        });
-    </script>
+<style>
+    .button, .close {
+      color: #000;
+      text-decoration: none;
+    }
+    
+    .button { background-color: yellow; }
+    
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 500ms;
+      visibility: hidden;
+      opacity: 0;
+    }
+    
+    .overlay:target { visibility: visible; opacity: 1; }
+    
+    .popup {
+      margin: 70px auto;
+      background: pink;
+      border-radius: 3px;
+      width: 30%;
+      position: relative;
+    }
+    
+    .close {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+    }
+    
+    .popup .content {
+      max-height: 30%;
+      overflow: auto;
+    }
+    </style>
+    
+    
+    Regular text <span class="box"><a class="button" href="#thepopup">popup link</a></span> regular text
+    
+    <!-- Only show the content below when the popup is clicked -->
+    <div id="thepopup" class="overlay">
+        <div class="popup">
+            <h2>H2 Heading</h2>
+            <a class="close" href="#">close</a>
+            <div class="content">
+                Popup content.
+            </div>
+        </div>
+    </div>
+    
+    
