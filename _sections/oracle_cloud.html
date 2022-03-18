@@ -11,35 +11,34 @@ order: 5
 <style>
   details {
       border: 1px solid #aaa;
-      border-radius: 4px;
-      padding: .5em .5em 0;
+      border-radius: 0px;
+      width: 188px;
   }
-
-  summary {
-      font-weight: bold;
-      margin: -.5em -.5em 0;
-      padding: .5em;
+  
+  details > summary {
+    padding: 2px 6px;
+    width: 11em;
+    border: none;
+    cursor: pointer;
   }
-
-  details[open] {
-      padding: .5em;
+  
+  details > p {
+    border: 1px;
+    padding: 2px 6px;
+    margin: 0;
+    box-shadow: 1px 1px 1px black;
   }
-
-  details[open] summary {
-      border-bottom: 1px solid #aaa;
-      margin-bottom: .5em;
+  
+  details[open] > summary {
+    background-color: #cc;
   }
-</style>
-
-<details>
-  <summary>Clique aqui!</summary>
-    <a class="learn-more" href="https://dls.igorferreira.xyz" target="_blank">Caddy</a>
-    <br><br>
-    <a class="learn-more" href="https://arqs.igorferreira.xyz" target="_blank">Gerenciador de Arquivos</a>
-    <br><br>
-    <a class="learn-more" href="https://ts3manager.igorferreira.xyz" target="_blank">TS3 Manager</a>
-    <br><br>
-    <a class="learn-more" href="https://gm.igorferreira.xyz" target="_blank">Guacamole APP</a>
-    <br><br>
-    <a class="learn-more" href="https://npm.igorferreira.xyz" target="_blank">Nginx Proxy Manager</a>
-</details>
+  </style>
+  
+  <details>
+    <summary>Clique aqui!</summary>
+      <p><a class="learn-more" href="https://dls.igorferreira.xyz" target="_blank">Caddy</a></p>
+      <p><a class="learn-more" href="https://arqs.igorferreira.xyz" target="_blank">Gerenciador de Arquivos</a></p>
+      <p><a class="learn-more" href="https://ts3manager.igorferreira.xyz" target="_blank">TS3 Manager</a></p>
+      <p><a class="learn-more" href="https://gm.igorferreira.xyz" target="_blank">Guacamole APP</a></p>
+      <p><a class="learn-more" href="https://npm.igorferreira.xyz" target="_blank">Nginx Proxy Manager</a></p>
+  </details>
