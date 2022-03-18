@@ -7,37 +7,23 @@ order: 5
 <img src="{{ 'assets/images/oracle.svg' | relative_url }}" alt="Portainer logo" width="200" height="200" />
 
 <h4>Aplicações rodando na Oracle Cloud.</h4>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary rounded-3" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            Clique aqui
-            </button>
+            
+    <ul>
+    {% for member in site.data.oracle %}
+      <li>
+        <a href="#" class="show-message">
+          {{ member.name }}, click me to see something
+        </a>
+        <div class="modal hide"> My favorite music is {{ oracle.music}}</div>
+      </li>
+    {% endfor %}
+    </ul>
 
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content rounded-3">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Aplicações na Oracle Cloud</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-            <div class="modal-body">
-                <p align="center">
-                    <a class="learn-more" href="https://dls.igorferreira.xyz" target="_blank">Caddy</a>
-                    <br><br>
-                    <a class="learn-more" href="https://arqs.igorferreira.xyz" target="_blank">Gerenciador de Arquivos</a>
-                    <br><br>
-                    <a class="learn-more" href="https://ts3manager.igorferreira.xyz" target="_blank">TS3 Manager</a>
-                    <br><br>
-                    <a class="learn-more" href="https://gm.igorferreira.xyz" target="_blank">Guacamole APP</a>
-                    <br><br>
-                    <a class="learn-more" href="https://npm.igorferreira.xyz" target="_blank">Nginx Proxy Manager</a>
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-primary rounded-3" data-bs-dismiss="modal">Fechar</button>        
-            </div>
-                    </div>
-                </div>
-            </div>
-
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $("a.show-message").on("click", function () {
+                console.log("clicked");
+                $(this).next().removeClass("hide");
+            });
+        });
+    </script>
